@@ -1,6 +1,6 @@
 {
     "BudgetLimit": {
-        "Amount": "50.00",
+        "Amount": "50",
         "Unit": "USD"
     },
     "BudgetName": "My Monthly Cost Budget",
@@ -20,8 +20,8 @@
         "UseBlended": false
     },
     "TimePeriod": {
-        "Start": 1675209600000,
-        "End": 3706473600000
+        "Start": 1477958399,
+        "End": 3706473600
     },
-    "TimeUnit": "Monthly"
+    "TimeUnit": "MONTHLY"
 }

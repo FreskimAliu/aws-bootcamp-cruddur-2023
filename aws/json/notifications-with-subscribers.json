@@ -6,12 +6,12 @@
             "Threshold": 85,
             "ThresholdType": "PERCENTAGE"
         },
-        "Subscribers": {
-            "0": {
+        "Subscribers": [
+            {
                 "SubscriptionType": "EMAIL",
                 "Address": "freskimaliu@gmail.com"
             }
-        }
+        ]
     },
     {
         "Notification": {
@@ -20,12 +20,12 @@
             "Threshold": 100,
             "ThresholdType": "PERCENTAGE"
         },
-        "Subscribers": {
-            "0": {
+        "Subscribers": [
+            {
                 "SubscriptionType": "EMAIL",
                 "Address": "freskimaliu@gmail.com"
             }
-        }
+        ]
     },
     {
         "Notification": {
@@ -34,11 +34,11 @@
             "Threshold": 100,
             "ThresholdType": "PERCENTAGE"
         },
-        "Subscribers": {
-            "0": {
+        "Subscribers": [
+            {
                 "SubscriptionType": "EMAIL",
                 "Address": "freskimaliu@gmail.com"
             }
-        }
+        ]
     }
 ]
