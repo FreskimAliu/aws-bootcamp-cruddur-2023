@@ -1,0 +1,44 @@
+[
+    {
+        "Notification": {
+            "ComparisonOperator": "GREATER_THAN",
+            "NotificationType": "ACTUAL",
+            "Threshold": 85,
+            "ThresholdType": "PERCENTAGE"
+        },
+        "Subscribers": {
+            "0": {
+                "SubscriptionType": "EMAIL",
+                "Address": "freskimaliu@gmail.com"
+            }
+        }
+    },
+    {
+        "Notification": {
+            "ComparisonOperator": "GREATER_THAN",
+            "NotificationType": "ACTUAL",
+            "Threshold": 100,
+            "ThresholdType": "PERCENTAGE"
+        },
+        "Subscribers": {
+            "0": {
+                "SubscriptionType": "EMAIL",
+                "Address": "freskimaliu@gmail.com"
+            }
+        }
+    },
+    {
+        "Notification": {
+            "ComparisonOperator": "GREATER_THAN",
+            "NotificationType": "FORECASTED",
+            "Threshold": 100,
+            "ThresholdType": "PERCENTAGE"
+        },
+        "Subscribers": {
+            "0": {
+                "SubscriptionType": "EMAIL",
+                "Address": "freskimaliu@gmail.com"
+            }
+        }
+    }
+]
