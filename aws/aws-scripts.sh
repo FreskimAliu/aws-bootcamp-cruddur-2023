@@ -54,8 +54,48 @@ function create-monthly-budget {
         --notifications-with-subscribers file://json/notifications-with-subscribers.json
 }
 
+function create-health-dashboard {
+  local TOPIC_ARN=$(aws sns create-topic --name my-health-topic --output text)
+  EMAIL_ADDRESS="freskimaliu@gmail.com"
+
+  # Subscribe the email address to the SNS topic
+  aws sns subscribe \
+    --topic-arn $TOPIC_ARN \
+    --protocol email \
+    --notification-endpoint $EMAIL_ADDRESS \
+    --return-subscription-arn \
+    --output text
+
+  # Wait for the subscription to be confirmed
+  while true; do
+    SUBSCRIPTION_STATUS=$(aws sns list-subscriptions-by-topic \
+        --topic-arn $TOPIC_ARN \
+        --query 'Subscriptions[0].SubscriptionArn' \
+        --output text)
+    if [ "$SUBSCRIPTION_STATUS" != "PendingConfirmation" ]; then
+        printf "Subscription confirmed\n"
+        break
+    else
+        printf "Subscription status: %s\n" "$SUBSCRIPTION_STATUS"
+        sleep 10
+    fi
+  done
+  
+  # The subscription is now confirmed, continue with the script
+  printf "Subscribed to %s with %s\n" "$TOPIC_ARN" "$EMAIL_ADDRESS"
+
+  # Enable health events
+  aws health enable-health-service-access --service-namespace "AWS Health" --region $AWS_REGION
+
+  # Create an Amazon CloudWatch Events rule to send Health events to the SNS topic 
+  aws events put-rule --name health-dashboard-rule --event-pattern '{"source": ["aws.health"]}' --state ENABLED --description "Health events to SNS topic"
+
+  # Add a target to the CloudWatch Events rule 
+  aws events put-targets --rule health-dashboard-rule --targets "Id"="1","Arn"="$TOPIC_ARN"
+}
+
 # Define the menu options
-options=("Create Billing Alarm" "Create Monthly Budget")
+options=("Create Billing Alarm" "Create Monthly Budget" "Create Health Dashboard")
 
 # Prompt the user to select an option
 PS3="Select a function: "
@@ -67,6 +107,9 @@ do
       ;;
     "Create Monthly Budget")
       create-monthly-budget
+      ;;
+    "Create Health Dashboard")
+      create-health-dashboard
       ;;
     *)
       echo "Invalid option. Please select a valid option."
