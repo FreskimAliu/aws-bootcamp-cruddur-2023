@@ -24,6 +24,10 @@ This function creates a budget for AWS account and subscribes an SNS topic to th
 </div>
 
 I included three thresholds for this monthy budget:
+* When Actual Cost > 85%
+* When Actual Cost > 100%
+* When Forecasted Cost > 100%
+
 <div style="text-align:center">
   <img src="../_docs/assets/budget-thresholds.png" width="75%">
 </div>
