@@ -15,7 +15,7 @@ This function creates a CloudWatch alarm for billing-related metrics and sends n
 <div style="max-width: 50%;">
   ![Billing Alarm](../_docs/assets/billing-alarm.png)
 </div>
-
+---
 
 ### Create Monthly Budget
 This function creates a budget for AWS account and subscribes an SNS topic to the budget. It takes the account ID from the user's AWS credentials and uses two JSON files (json/budget.json and json/notifications-with-subscribers.json) to create the budget and add the SNS topic subscription.
@@ -23,6 +23,7 @@ This function creates a budget for AWS account and subscribes an SNS topic to th
 <div style="max-width: 50%;">
   ![Monthly Budget](../_docs/assets/monthly-budget.png)
 </div>
+---
 
 ### Create Health Dashboard Notification
 This function creates an SNS topic and subscribes an email address to the topic. It then creates an Amazon CloudWatch Events rule to send Health events to the SNS topic. After creating the rule, it adds the SNS topic as a target to the rule.
@@ -30,4 +31,4 @@ This function creates an SNS topic and subscribes an email address to the topic.
 <div style="max-width: 50%;">
   ![Health Dashboard Notification](../_docs/assets/health-dashboard-rule.png)
 </div>
-
+---
