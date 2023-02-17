@@ -106,7 +106,7 @@ ColorBlue(){
 
 menu(){
 echo -ne "
-My First Menu
+Monitoring & Cost Menu 
 $(ColorGreen '1)') Create billing alarm
 $(ColorGreen '2)') Create monthly budget
 $(ColorGreen '3)') Create health dashboard
