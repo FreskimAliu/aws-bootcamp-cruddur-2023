@@ -17,8 +17,10 @@ __Link to these charts:__ https://lucid.app/lucidchart/97d7793e-a475-493c-bf41-9
 ### Logical Chart for CI/CD
 <img src="../_docs/assets/logical-cicd-chart.png">
 
+
 ## Destroy your root account credentials & Set MFA
 <img src="../_docs/assets/root-user.png" width="75%">
+
 
 ## Creating Billing Alarm & Budgets
 For this I created a Bash script __(aws/aws-scripts.sh)__ that provides a simple menu-driven interface for creating various resources related to monitoring and cost control in AWS.
@@ -44,6 +46,7 @@ I included three thresholds for this monthy budget:
 This function creates an SNS topic and subscribes an email address to the topic. It then creates an Amazon CloudWatch Events rule to send Health events to the SNS topic. After creating the rule, it adds the SNS topic as a target to the rule.
 
 <img src="../_docs/assets/health-dashboard-rule.png" width="75%">
+
 
 ## Support ticket and service limit
 ### Service Quotas
