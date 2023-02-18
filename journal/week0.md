@@ -1,5 +1,10 @@
 # Week 0 — Billing and Architecture
 
+## Destroy your root account credentials & Set MFA
+<div style="text-align:center">
+  <img src="../_docs/assets/root-user.png" width="75%">
+</div>
+
 ## Creating Billing Alarm & Budgets
 
 For this I created a Bash script that provides a simple menu-driven interface for creating various resources related to monitoring and cost control in AWS.
