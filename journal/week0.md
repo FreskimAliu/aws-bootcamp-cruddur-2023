@@ -40,11 +40,13 @@ This function creates an SNS topic and subscribes an email address to the topic.
 </div>
 
 ## Support ticket and service limit
+### Service Quotas
 I requested a service quotas increase for S3 buckets. Currently I have 100 buckets service limit and I requested to increase it to 200.
 <div style="text-align:center">
   <img src="../_docs/assets/request-quota-increase.png" width="75%">
 </div>
 
+### Support ticket
 Automatically it opened a support ticket:
 <div style="text-align:center">
   <img src="../_docs/assets/support-case.png" width="75%">
