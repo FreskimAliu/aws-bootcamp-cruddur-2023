@@ -25,14 +25,17 @@ __Link to these charts:__ https://lucid.app/lucidchart/97d7793e-a475-493c-bf41-9
 ## Creating Billing Alarm & Budgets
 For this I created a Bash script __(aws/aws-scripts.sh)__ that provides a simple menu-driven interface for creating various resources related to monitoring and cost control in AWS.
 The script defines three functions: create-billing-alarm, create-monthly-budget & create-health-dashboard-notification.
+
 <img src="../_docs/assets/monitoring-cost-menu.png" width="75%">
 
 ### Create Billing Alarm
 This function creates a CloudWatch alarm for billing-related metrics and sends notifications to an SNS topic subscribed by the email address specified in the function. It updates a JSON file (json/alarm_config.json) with the SNS topic ARN and creates the CloudWatch alarm based on the updated file. After creating the alarm, it removes the JSON file.
+
 <img src="../_docs/assets/billing-alarm.png" width="75%">
 
 ### Create Monthly Budget
 This function creates a budget for AWS account and subscribes an SNS topic to the budget. It takes the account ID from the user's AWS credentials and uses two JSON files (json/budget.json and json/notifications-with-subscribers.json) to create the budget and add the SNS topic subscription.
+
 <img src="../_docs/assets/monthly-budget.png" width="75%">
 
 I included three thresholds for this monthy budget:
