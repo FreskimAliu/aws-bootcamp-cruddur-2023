@@ -7,7 +7,7 @@
 
 ## Creating Billing Alarm & Budgets
 
-For this I created a Bash script that provides a simple menu-driven interface for creating various resources related to monitoring and cost control in AWS.
+For this I created a Bash script __(aws/aws-scripts.sh)__ that provides a simple menu-driven interface for creating various resources related to monitoring and cost control in AWS.
 The script defines three functions: create-billing-alarm, create-monthly-budget & create-health-dashboard-notification.
 
 <div style="text-align:center">
