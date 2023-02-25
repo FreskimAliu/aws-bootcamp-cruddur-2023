@@ -1,8 +1,8 @@
-FROM node:16.18-alpine
+FROM node:16.18-alpine AS builder
 
-RUN mkdir -p /home/node/frontend-react-js && chown -R node:node /home/node/frontend-react-js
+RUN mkdir -p /app && chown -R node:node /app
 
-WORKDIR /home/node/frontend-react-js
+WORKDIR /app
 
 # Set necessary environment variables needed for our image
 ENV PORT=3000
@@ -14,6 +14,11 @@ USER node
 COPY --chown=node:node package*.json ./
 RUN npm install
 
+FROM node:16.18-alpine
+
+WORKDIR /app
+
+COPY --from=builder /app/node_modules ./node_modules
 COPY --chown=node:node . .
 
 EXPOSE ${PORT}
