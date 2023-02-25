@@ -1,5 +1,5 @@
 # Build stage
-FROM python:3.10-slim-buster AS build
+FROM python:3.12.0a5-slim AS build
 
 WORKDIR /app
 
@@ -9,7 +9,7 @@ RUN pip3 install --prefix=/install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Development stage
-FROM python:3.10-slim-buster
+FROM python:3.12.0a5-slim
 
 RUN apt-get update && apt-get install --no-install-recommends -y curl \
     && apt-get clean \
