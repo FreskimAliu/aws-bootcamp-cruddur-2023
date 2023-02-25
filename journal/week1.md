@@ -3,17 +3,17 @@
 ### 1. Added Dockerfile & docker compose files
 I added Dockerfile files for frontend and backend, also added docker compose file in the root folder.
 
-Commit for this: [46032098aa827d9cd15676311a5a5044f2155d4f](https://github.com/FreskimAliu/aws-bootcamp-cruddur-2023/commit/46032098aa827d9cd15676311a5a5044f2155d4f)
+* Commit for this: [46032098aa827d9cd15676311a5a5044f2155d4f](https://github.com/FreskimAliu/aws-bootcamp-cruddur-2023/commit/46032098aa827d9cd15676311a5a5044f2155d4f)
 
 ### 2. Completed Notifications page
 Created new Flask endpoint for notification & also added React page for the frontend part:
 
-Commit for this change: [4d2f83e2c06067101394d848f83eda969b27cc46](https://github.com/FreskimAliu/aws-bootcamp-cruddur-2023/commit/4d2f83e2c06067101394d848f83eda969b27cc46)
+* Commit for this change: [4d2f83e2c06067101394d848f83eda969b27cc46](https://github.com/FreskimAliu/aws-bootcamp-cruddur-2023/commit/4d2f83e2c06067101394d848f83eda969b27cc46)
 
 ### 3. Added Dynamodb local & Postgres configuration
 Added configuration for DynamoDB local & postgres in docker-compose.yml file and run them in my gitpod environment & my local machine.
 
-Commit for this change: [04c142db74fed00bf36fce2eecfe281374445272](https://github.com/FreskimAliu/aws-bootcamp-cruddur-2023/commit/04c142db74fed00bf36fce2eecfe281374445272)
+* Commit for this change: [04c142db74fed00bf36fce2eecfe281374445272](https://github.com/FreskimAliu/aws-bootcamp-cruddur-2023/commit/04c142db74fed00bf36fce2eecfe281374445272)
 
 
 ## Challenges
@@ -27,7 +27,7 @@ python3 -m flask run --host=0.0.0.0 --port=4567
 And on Dockerfile I just updated the CMD commmand.
 ``CMD ["sh", "run.sh"]``
 
-__Here is the commit of this change: [b814b54a485632f3cd3ed499998daab2bd5c7fd9](https://github.com/FreskimAliu/aws-bootcamp-cruddur-2023/commit/b814b54a485632f3cd3ed499998daab2bd5c7fd9)__
+* Here is the commit of this change: [b814b54a485632f3cd3ed499998daab2bd5c7fd9](https://github.com/FreskimAliu/aws-bootcamp-cruddur-2023/commit/b814b54a485632f3cd3ed499998daab2bd5c7fd9)
 
 ### 2. Push and tag a image to DockerHub
 For this I created a script to push images to Dockerhub. The script is called `push-to-dockerhub.sh` and is placed in root folder.
@@ -48,8 +48,8 @@ Backend:
 
 <img src="../_docs/assets/dockerhub-backend-flask.png" width="75%">
 
-__Here is the commit of this change:
-[04c142db74fed00bf36fce2eecfe281374445272](https://github.com/FreskimAliu/aws-bootcamp-cruddur-2023/commit/04c142db74fed00bf36fce2eecfe281374445272)__
+* Here is the commit of this change:
+[04c142db74fed00bf36fce2eecfe281374445272](https://github.com/FreskimAliu/aws-bootcamp-cruddur-2023/commit/04c142db74fed00bf36fce2eecfe281374445272)
 
 ### 3. Use multi-stage building for a Dockerfile build
 For this challenge I update Dockerfile files for both projects and used multi-stage builing.
@@ -60,8 +60,8 @@ Size of docker images before implementing multi-stage:
 Size of docker image after implementing multi-stage:
 <img src="../_docs/assets/size-after-multistage.png" width="75%">
 
-__Here is the commit for this change: 
-[041b3e9c337de2c8b74370bf62a32ea8802ca85d](https://github.com/FreskimAliu/aws-bootcamp-cruddur-2023/commit/041b3e9c337de2c8b74370bf62a32ea8802ca85d)__
+* Here is the commit for this change: 
+[041b3e9c337de2c8b74370bf62a32ea8802ca85d](https://github.com/FreskimAliu/aws-bootcamp-cruddur-2023/commit/041b3e9c337de2c8b74370bf62a32ea8802ca85d)
 
 
 ### 4. Implement a healthcheck 
@@ -84,11 +84,13 @@ healthcheck:
         condition: service_healthy
 ````
 
+
 Result of implementation:
+
 <img src="../_docs/assets/healthcheck.png" width="75%">
 
-__Here is the commit for this change:
-[c7cb7529d45fed80cd4a0dff19a5bcaff1f354ea](https://github.com/FreskimAliu/aws-bootcamp-cruddur-2023/commit/c7cb7529d45fed80cd4a0dff19a5bcaff1f354ea)__
+* Here is the commit for this change:
+[c7cb7529d45fed80cd4a0dff19a5bcaff1f354ea](https://github.com/FreskimAliu/aws-bootcamp-cruddur-2023/commit/c7cb7529d45fed80cd4a0dff19a5bcaff1f354ea)
 
 ### 5. Research best practices of Dockerfiles and attempt to implement it in your Dockerfile
 Some of the best practices that a Dockerfile should have and I implemented are:
