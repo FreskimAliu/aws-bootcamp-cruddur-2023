@@ -1,4 +1,4 @@
-FROM node:16.18-alpine AS builder
+FROM node:16.19.1-alpine AS builder
 
 RUN mkdir -p /app && chown -R node:node /app
 
@@ -14,7 +14,7 @@ USER node
 COPY --chown=node:node package*.json ./
 RUN npm install
 
-FROM node:16.18-alpine
+FROM node:16.19.1-alpine
 
 WORKDIR /app
 
