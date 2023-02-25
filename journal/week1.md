@@ -29,7 +29,9 @@ And on Dockerfile I just updated the CMD commmand.
 ``CMD ["sh", "run.sh"]``
 
 * Here is the commit of this change: [b814b54a485632f3cd3ed499998daab2bd5c7fd9](https://github.com/FreskimAliu/aws-bootcamp-cruddur-2023/commit/b814b54a485632f3cd3ed499998daab2bd5c7fd9)
+
 ---
+
 ### 2. Push and tag a image to DockerHub
 For this I created a script to push images to Dockerhub. The script is called `push-to-dockerhub.sh` and is placed in root folder.
 
@@ -37,17 +39,17 @@ In this script, I'm tagging images with two tags: latest & a timestamp that I ge
 
 I created an account in Dockerhub and created repositories for both projects:
 
-<img src="../_docs/assets/dockerhub.png" width="75%">
+<img src="../_docs/assets/week-1/dockerhub.png" width="75%">
 
 Here are some tags that I've pushed to repositories in DockerHub
 
 Frontend:
 
-<img src="../_docs/assets/dockerhub-frontend-js.png" width="75%">
+<img src="../_docs/assets/week-1/dockerhub-frontend-js.png" width="75%">
 
 Backend:
 
-<img src="../_docs/assets/dockerhub-backend-flask.png" width="75%">
+<img src="../_docs/assets/week-1/dockerhub-backend-flask.png" width="75%">
 
 * Here is the commit of this change:
 [04c142db74fed00bf36fce2eecfe281374445272](https://github.com/FreskimAliu/aws-bootcamp-cruddur-2023/commit/04c142db74fed00bf36fce2eecfe281374445272)
@@ -57,10 +59,10 @@ Backend:
 For this challenge I update Dockerfile files for both projects and used multi-stage builing.
 
 Size of docker images before implementing multi-stage:
-<img src="../_docs/assets/size-before-multistage.png" width="75%">
+<img src="../_docs/assets/week-1/size-before-multistage.png" width="75%">
 
 Size of docker image after implementing multi-stage:
-<img src="../_docs/assets/size-after-multistage.png" width="75%">
+<img src="../_docs/assets/week-1/size-after-multistage.png" width="75%">
 
 * Here is the commit for this change: 
 [041b3e9c337de2c8b74370bf62a32ea8802ca85d](https://github.com/FreskimAliu/aws-bootcamp-cruddur-2023/commit/041b3e9c337de2c8b74370bf62a32ea8802ca85d)
@@ -89,7 +91,7 @@ healthcheck:
 
 Result of implementation:
 
-<img src="../_docs/assets/healthcheck.png" width="75%">
+<img src="../_docs/assets/week-1/healthcheck.png" width="75%">
 
 * Here is the commit for this change:
 [c7cb7529d45fed80cd4a0dff19a5bcaff1f354ea](https://github.com/FreskimAliu/aws-bootcamp-cruddur-2023/commit/c7cb7529d45fed80cd4a0dff19a5bcaff1f354ea)
@@ -115,10 +117,10 @@ For my local environment I run this command:
 `docker compose -f docker-compose.local.yml up`
 
 Containers running in my local machine in Docker Desktop:
-<img src="../_docs/assets/local-development.png" width="75%">
+<img src="../_docs/assets/week-1/local-development.png" width="75%">
 
 Accessing application in my local machine:
-<img src="../_docs/assets/app-local.png" width="75%">
+<img src="../_docs/assets/week-1/app-local.png" width="75%">
 
 ---
 
@@ -138,12 +140,13 @@ I had to update docker-compose file to change environment variables that were po
 
 Also I had to update EC2 instance security group to add some inbound rules:
 
-<img src="../_docs/assets/ingress-rules.png" width="75%">
+<img src="../_docs/assets/week-1/ingress-rules.png" width="75%">
 
 Here are containers that are running inside EC2 instance:
 
-<img src="../_docs/assets/containers-ec2.png" width="75%">
+<img src="../_docs/assets/week-1/containers-ec2.png" width="75%">
 
 Accessing application from EC2 instance:
-<img src="../_docs/assets/app-ec2.png" width="75%">
+<img src="../_docs/assets/week-1/app-ec2.png" width="75%">
+
 ---
