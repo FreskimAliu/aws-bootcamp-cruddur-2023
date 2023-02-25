@@ -15,9 +15,10 @@ Added configuration for DynamoDB local & postgres in docker-compose.yml file and
 
 * Commit for this change: [04c142db74fed00bf36fce2eecfe281374445272](https://github.com/FreskimAliu/aws-bootcamp-cruddur-2023/commit/04c142db74fed00bf36fce2eecfe281374445272)
 
-
-## Challenges
 ---
+
+## Challenge Homeworks
+
 ### 1. Run the dockerfile CMD as an external script
 Created a script called ``run.sh`` which will start flask application.
 ```
@@ -28,7 +29,7 @@ And on Dockerfile I just updated the CMD commmand.
 ``CMD ["sh", "run.sh"]``
 
 * Here is the commit of this change: [b814b54a485632f3cd3ed499998daab2bd5c7fd9](https://github.com/FreskimAliu/aws-bootcamp-cruddur-2023/commit/b814b54a485632f3cd3ed499998daab2bd5c7fd9)
-
+---
 ### 2. Push and tag a image to DockerHub
 For this I created a script to push images to Dockerhub. The script is called `push-to-dockerhub.sh` and is placed in root folder.
 
@@ -50,6 +51,7 @@ Backend:
 
 * Here is the commit of this change:
 [04c142db74fed00bf36fce2eecfe281374445272](https://github.com/FreskimAliu/aws-bootcamp-cruddur-2023/commit/04c142db74fed00bf36fce2eecfe281374445272)
+---
 
 ### 3. Use multi-stage building for a Dockerfile build
 For this challenge I update Dockerfile files for both projects and used multi-stage builing.
@@ -62,7 +64,7 @@ Size of docker image after implementing multi-stage:
 
 * Here is the commit for this change: 
 [041b3e9c337de2c8b74370bf62a32ea8802ca85d](https://github.com/FreskimAliu/aws-bootcamp-cruddur-2023/commit/041b3e9c337de2c8b74370bf62a32ea8802ca85d)
-
+---
 
 ### 4. Implement a healthcheck 
 For this challenge I created a endpoint in app called /health so I can hit it when I want to check if application is healthy. In docker-compose file I added the healthcheck part and the part where frontend service will wait until backend service is healthy.
@@ -91,6 +93,7 @@ Result of implementation:
 
 * Here is the commit for this change:
 [c7cb7529d45fed80cd4a0dff19a5bcaff1f354ea](https://github.com/FreskimAliu/aws-bootcamp-cruddur-2023/commit/c7cb7529d45fed80cd4a0dff19a5bcaff1f354ea)
+---
 
 ### 5. Research best practices of Dockerfiles and attempt to implement it in your Dockerfile
 Some of the best practices that a Dockerfile should have and I implemented are:
@@ -104,6 +107,7 @@ Some of the best practices that a Dockerfile should have and I implemented are:
   [Snyk PR for Backend Dockerfile](https://github.com/FreskimAliu/aws-bootcamp-cruddur-2023/pull/2)
 
 * Linting Dockerfile using hadolint (Installed it in gitpod) [605a8f997c0eb45b43898acd749992dc9e6a618b](https://github.com/FreskimAliu/aws-bootcamp-cruddur-2023/commit/605a8f997c0eb45b43898acd749992dc9e6a618b)
+---
 
 ### 6. Learn how to install Docker on your localmachine and get the same containers running outside of Gitpod / Codespaces
 For this challenge I created another docker compose file called `docker-compose.local.yml` to use it in my localmachine. I created this file so I don't have to change environment variables for each environment.
@@ -115,6 +119,8 @@ Containers running in my local machine in Docker Desktop:
 
 Accessing application in my local machine:
 <img src="../_docs/assets/app-local.png" width="75%">
+
+---
 
 ### 7. Launch an EC2 instance that has docker installed, and pull a container to demonstrate you can run your own docker processes. 
 
@@ -140,4 +146,4 @@ Here are containers that are running inside EC2 instance:
 
 Accessing application from EC2 instance:
 <img src="../_docs/assets/app-ec2.png" width="75%">
-
+---
