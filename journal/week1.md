@@ -21,7 +21,7 @@ Added configuration for DynamoDB local & postgres in docker-compose.yml file and
 
 ### 1. Run the dockerfile CMD as an external script
 Created a script called ``run.sh`` which will start flask application.
-```
+```bash
 #! /bin/sh
 python3 -m flask run --host=0.0.0.0 --port=4567
 ```
@@ -70,23 +70,23 @@ Size of docker image after implementing multi-stage:
 
 ### 4. Implement a healthcheck 
 For this challenge I created a endpoint in app called /health so I can hit it when I want to check if application is healthy. In docker-compose file I added the healthcheck part and the part where frontend service will wait until backend service is healthy.
-````
+```python
 @app.route("/health", methods=['GET'])
 def healthcheck():
     return jsonify({'status': 'ok'})
-````
-````
+```
+```yaml
 healthcheck:
     test: ["CMD", "curl", "-f", "https://4567-${GITPOD_WORKSPACE_ID}.${GITPOD_WORKSPACE_CLUSTER_HOST}/health"]
     interval: 20s
     timeout: 5s
     retries: 3
-````
-````
+```
+```yaml
     depends_on:
       backend-flask: 
         condition: service_healthy
-````
+```
 
 
 Result of implementation:
