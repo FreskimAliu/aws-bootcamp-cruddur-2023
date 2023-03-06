@@ -1,7 +1,7 @@
 # Build stage
 FROM python:3.10-slim-buster AS build
 
-WORKDIR /app
+WORKDIR /backend-flask
 
 COPY requirements.txt .
 RUN pip3 install --prefix=/install --no-cache-dir -r requirements.txt
@@ -19,10 +19,10 @@ RUN apt-get update && apt-get install --no-install-recommends -y curl \
 RUN adduser --disabled-password --gecos '' appuser
 USER appuser
 
-WORKDIR /app
+WORKDIR /backend-flask
 
 COPY --from=build /install /usr/local
-COPY --from=build /app .
+COPY --from=build /backend-flask .
 
 ENV FLASK_ENV=development
 
