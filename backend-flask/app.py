@@ -37,7 +37,7 @@ tracer = trace.get_tracer(__name__)
 LOGGER = logging.getLogger(__name__)
 LOGGER.setLevel(logging.DEBUG)
 console_handler = logging.StreamHandler()
-cw_handler = watchtower.CloudWatchLogHandler(log_group='cruddur-backend')
+cw_handler = watchtower.CloudWatchLogHandler(log_group='cruddur-backend-service')
 LOGGER.addHandler(console_handler)
 LOGGER.addHandler(cw_handler)
 
